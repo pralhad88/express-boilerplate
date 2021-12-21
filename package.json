@@ -1,13 +1,13 @@
 {
-  "name": "tataaia-backend",
+  "name": "express-boilerplat",
   "version": "1.0.0",
-  "description": "TATA AIA wrapper API with services",
+  "description": "To create server side REST API using express.js",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "author": "Mantra Labs",
+  "author": "Pralhad Jadhav",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.24.0",

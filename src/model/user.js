@@ -1,16 +1,18 @@
 const Joi = require("joi");
-const { Model } = require("./helpers");
+const { Model } = require("./helper/index")
 
-module.exports = class Banner extends Model {
+module.exports = class User extends Model {
   static get tableName() {
-    return "banners";
+    return "users";
   }
 
   static get joiSchema() {
     return Joi.object({
       id: Joi.number().integer().greater(0),
-      title: Joi.string(),
-      event_date: Joi.date(),
+      name: Joi.string(),
+      username: Joi.string(),
+      email: Joi.string(),
+      password: Joi.string(),
       created_at: Joi.date()
     });
   }
