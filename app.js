@@ -38,14 +38,14 @@ essentialSetup = () => {
 routesSetup = () => {
   for (let i = 0; i < routeMap.length; i++) {
     const R = routeMap[i];
-    console.log(`Initializing ${R.route_file} --> ${R.path}`);
+    console.log(`Initializing ${R.route_file} --> /api${R.path}`);
     const router = require(R.route_file);
     if (R.middleware && R.middleware.length > 0) {
-      app.use(R.path, function (req, res, next) {
+      app.use(`/api${R.path}`, function (req, res, next) {
         next();
       }, ...[...R.middleware, router]);
     }
-    app.use(R.path, router);
+    app.use(`/api${R.path}`, router);
     console.log(`👍`);
   }
 };

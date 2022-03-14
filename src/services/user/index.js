@@ -1,5 +1,5 @@
 const User = require("../../model/user");
-const makeTataAiaApiCall = require("../../common/tata-aia-api-call");
+const makeTataAiaApiCall = require("../../common/api-call");
 
 class UserServices {
   getBanners = async () => {

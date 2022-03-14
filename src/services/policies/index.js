@@ -1,4 +1,4 @@
-const makeTataAiaApiCall = require("../../common/tata-aia-api-call");
+const makeTataAiaApiCall = require("../../common/api-call");
 
 class PolicieServices {
   getPolicies = async () => {
